@@ -17,9 +17,6 @@ pip install tensorflow
 ```
 
 **以下のようなディレクトリ構造に**
-> 分類器ディレクトリ(以下から取得)
-> https://github.com/opencv/opencv/blob/master/data/haarcascades/
-> https://github.com/opencv/opencv_contrib/blob/master/modules/face/data/cascades>/
 
 ```
 .
@@ -37,8 +34,8 @@ python keras_to_tensorflow.py keras_model/keras_model.h5
 ```
 
 
-# Original README
-## keras_to_tensorflow
+## Original README
+### keras_to_tensorflow
 General code to convert a trained keras model into an inference tensorflow model
 
 The notebook ```keras_to_tensorflow```, is a sample code which loads a trained keras model, freezes the nodes (converts all tensorflow variables to tensorflow constants), and saves the inference graph and weights into a protobuf file (.pb). This file can then be used to deploy the trained model for inference. During freezing, other nodes of the network, which do not contribute  the tensor that would contain the output predictions, are prunned. This results in a smaller, optimized network.
